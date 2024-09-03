@@ -1,0 +1,29 @@
+h1 {
+    font: bold;
+    font-size: 4rem;
+    text-align: center;
+    text-decoration: overline;
+    color: rgb(0, 126, 126) ;
+}
+
+p {
+   color: #52a5a7;   
+}
+h2 {
+    font-size: 3rem;
+    color: #00a6ac;
+    text-decoration: underline;
+}
+li {
+    color: #38704C;
+}
+a {
+    color: yellow;
+} 
+h3 {
+    font-size: 2rem;
+    color: #00aa3c;
+}
+* {
+    background-color: purple;
+}
