@@ -12,6 +12,7 @@ Table of contents:
 <ul>
     <li><a href= "#intro">Intro</a></li>
     <li><a href= "#sounds">Sounds</a></li>
+    <li><a href= "#sprays">Custom Sprays</a></li>
     <li><a href= "#textures">Textures</a></li>
     <li><a href= "#models">Models</a></li>
     <li><a href= "#addoninfo">addoninfo.txt</a></li>
@@ -22,20 +23,23 @@ Table of contents:
 <div id= "intro">
 <h2>Intro</h2>
 
-<p>If you've ever decided to download mods for a game, the Steam Workshop can make it pretty easy, and you can use an official mod-making tool to make mods like that, which is how I made some of my first mods. These mods were sound mods for Left 4 Dead 2, since I don't know how to use Blender. This guide is going to cover sounds, textures and models, as well as making addoninfo.txt and publishing your mod to the workshop. Other things, such as maps and scripts, are a bit more complex. I'll include links to Youtube videos or playlists on those, as well as videos in case you need further instruction on what I cover. Don't worry if it seems confusing, I myself was confused before doing research for this. However, I think I should go over the requirements first, and I will note which one it's for by adding (S) for sounds, (T) for textures, or (M) for models.</p>
+<p>If you've ever decided to download mods for a game, the Steam Workshop can make it pretty easy, and you can use an official mod-making tool to make mods like that, which is how I made some of my first mods. These mods were sound mods for Left 4 Dead 2, since I don't know how to use Blender. This guide is going to cover sounds, textures and models, as well as making addoninfo.txt and publishing your mod to the workshop. Other things, such as maps and scripts, are a bit more complex. I'll include links to Youtube videos or playlists on those, as well as videos in case you need further instruction on what I cover. Don't worry if it seems confusing, I myself was confused before doing research for this. However, I think I should go over the requirements first, and I will note which one it's for by adding (S) for sounds, (T) for textures, (Sp) for sprays or (M) for models.</p>
 
 <h3>Requirements</h3>
 
 <ul>
-    <li>Steam and Left 4 Dead 2, obviously (S/T/M)</li>
-    <li>Left 4 Dead 2 Authoring Tools (S/T/M)</li>
+    <li>Steam and Left 4 Dead 2, obviously (S/Sp/T/M)</li>
+    <li>Left 4 Dead 2 Authoring Tools (S/Sp/T/M)</li>
     <li>Notepad/Notepad++ (S/T/M)</li>
     <li>Audacity (S)</li>
     <li>GCFScape (T/M)</li>
     <li>Source SDK (M)</li>
-    <li>VTFEdit (T/M)</li>
+    <li>VTFEdit (Sp/T/M)</li>
+    <li>Spraygen (Sp)</li>
     <li>The sound effect/music/model you're modding in (S/M)</li>
+    <li>The picture you're making a spray (<b>has to</b> be a PNG to be transparent, has to be a GIF to be animated)(Sp)</li>
 </ul>
+<p>Oh, and one last thing. I'm neither a cop nor your mom, but I discourage using this knowledge for NSFW mods. </p>
 </div>
 
 <div id= "sounds">
@@ -65,6 +69,52 @@ Table of contents:
     <li>If it works, you're <a href= "#publishing">good to go.</a></li>
 </ol>
 </div>
+
+<div id= "sprays">
+    <h2>Custom Sprays</h2>
+    <p>Difficulty 2/10</p>
+    
+    <h3>Requirements</h3>
+    <ul>
+        <li>Steam</li>
+        <li>Left 4 Dead 2</li>
+        <li>Spraygen/VTFEdit</li>
+        <li>The picture you're making a spray (<b>must</b> be PNG to be transparent or GIF to be animated)</li>
+        <li>Notepad/Notepad++ and Left 4 Dead 2 Authoring Tools are optional here, but I recommend you do use them so you can publish your sprays to the workshop.</li>
+    </ul>
+    
+    <h3>Instructions</h3>
+    
+    <ol>
+        <li>Go to the files and look for "left4dead2/materials/vgui/logos", make a folder there called "custom", this is where your spray will go.</li>
+        <li>Get your picture ready, if it's transparent, save it as a PNG, otherwise it won't <b>be</b> transparent, same goes with an animated picture being saved as a GIF.</li>
+        <li>Install Spraygen, open it up, and make sure "Save File" is checked, and you could do this for TF2, CS Source or L4D1 as well (minus putting it on the workshop), but for now, click L4D2.</li>
+        <li>Import your spray</li>
+        <li>If it's transparent, check the checkbox saying "Transparent background"</li>
+        <li>Click "Convert to VTF", it should show you where it's saved.</li>
+        <li>Open the game, and go to Options > Multiplayer, the spray should work.</li>
+        <li>If not, move your spray from "custom" to "logos", restart the game, and click "Import Spray" in Options > Multiplayer, then go to "logos" and import it.</li>
+        <li>Now, if you want to upload this as part of a custom spray pack, repeat this for all the pictures you'll use as part of that spray pack. Now read below...</li>
+    </ol>
+    
+    <h3>Preparing your sprays to upload</h3>
+
+    <p>That was for getting your spray to use yourself, however, what if you want to upload a spray pack for some reason? Well, that's why this part is being made.</p>
+
+    <ol>
+        <li>Make your mod folder, it should include folders called "materials" and "scripts".</li>
+        <li>In "materials", make a folder called "vgui", and inside that, make one called "logos". Here's where your sprays will be, remember to add the VTFs rather than the PNGs/JPGs/GIFs.</li>
+        <li>In "scripts", make a .txt file called "sprays_manifest.txt" (no <a href= "#addoninfo">"addoninfo.txt"</a>? Shocker, I know).</li>
+        <li>It should look something like this...</li>
+        <ul>
+            <li>sprays_manifest</li>
+            <li>{</li>
+            <li>(Spray name)          (VTF name).vtf  //(repeat this for all sprays in your folder)</li>
+            <li>}</li>
+        </ul>
+        <li>Finally, your spray pack is <a href= "#publishing">ready to upload.</a></li>
+    </ol>
+    </div>
 
 <div id= "textures">
 
@@ -127,7 +177,7 @@ Table of contents:
     <li>Import the model, now would also be a good time to check the textures</li>
     <li>Match the models, like scaling and such.</li>
     <li>Add some bone weights and adjust the hand so the weapon bone isn't all janky.</li>
-    <li>Merge the meshes, and now you can edit the bone weights if you want.</li>
+    <li>Merge the meshes, and now you can edit the bone weights (and maybe add jiggle bones, such as to the hair [yes, they could also be in <b>those places</b>, ya freaks]) if you want.</li>
     <li>Now you finally export the model.</li>
     <li>Prepare the model to compile, you'll need to change a couple things in a text editor or programming/coding software like Notepad++.</li>
     <li>Compile your model with the SDK.</li>
@@ -184,6 +234,9 @@ Table of contents:
 <ul>
 <li><a href= "https://www.youtube.com/watch?v=J8ntbfWiNPE">Sounds (watch)</a></li>
 <li><a href= "https://steamcommunity.com/sharedfiles/filedetails/?id=2519598823">Sounds (read)</a></li>
+<li><a href= "https://www.youtube.com/watch?v=QKm-omreQh0">Sprays (watch)</a></li>
+<li><a href= "https://steamcommunity.com/sharedfiles/filedetails/?id=607627682">Sprays (read)</a></li>
+<li><a href= "https://www.youtube.com/watch?v=2T_lHB0UE6Y">Uploading a spray pack (watch only)</a></li>
 <li><a href= "https://www.youtube.com/watch?v=2hJLPJI4uLc&pp=ygUeaG93IHRvIG1ha2UgYSB0ZXh0dXJlIG1vZCBsNGQy">Textures (watch)</a></li>
 <li><a href= "https://steamcommunity.com/sharedfiles/filedetails/?id=3281476799">Textures (read)</a></li>
 <li><a href= "https://youtube.com/playlist?list=PLdjKu4sakf6kiCVIloG3qLu3qmVV8n_2V">Models (watch, but it's a playlist since the other video was like an hour long.)</a></li>
