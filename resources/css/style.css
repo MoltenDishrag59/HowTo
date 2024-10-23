@@ -3,15 +3,15 @@ h1 {
     font-size: 4rem;
     text-align: center;
     text-decoration: overline;
-    color: rgb(0, 126, 126) ;
+    color: rgb(126, 0, 126) ;
 }
 
 p {
-   color: #52a5a7;   
+   color: #60008d;   
 }
 h2 {
     font-size: 3rem;
-    color: #00a6ac;
+    color: #b83cff;
     text-decoration: underline;
 }
 li {
@@ -25,5 +25,5 @@ h3 {
     color: #00aa3c;
 }
 * {
-    background-color: purple;
+    background-color: rgb(0, 53, 168);
 }
