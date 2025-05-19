@@ -3,7 +3,7 @@ h1 {
     font-size: 4rem;
     text-align: center;
     text-decoration: overline;
-    color: rgb(126, 0, 126) ;
+    color: rgb(45, 59, 70) ;
 }
 
 p {
@@ -11,19 +11,22 @@ p {
 }
 h2 {
     font-size: 3rem;
-    color: #b83cff;
+    color: #00195e;
     text-decoration: underline;
 }
 li {
     color: #38704C;
 }
 a {
-    color: rgb(255, 145, 0);
+    color: rgb(211, 120, 0);
 } 
 h3 {
     font-size: 2rem;
-    color: #00aa3c;
+    color: #005f21;
 }
 * {
-    background-color: rgb(0, 34, 107);
+    background-color: rgb(7, 85, 255);
+}
+h4 {
+    color: rgb(226, 53, 0);
 }
